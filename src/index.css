@@ -1,0 +1,44 @@
+@import 'tailwindcss';
+@import './styles/tokens.css';
+
+@theme {
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Poppins', ui-sans-serif, system-ui, sans-serif;
+
+  --color-hub-canvas: var(--hub-canvas);
+  --color-hub-surface: var(--hub-surface);
+  --color-hub-surface-muted: var(--hub-surface-muted);
+  --color-hub-border: var(--hub-border);
+  --color-hub-border-muted: var(--hub-border-muted);
+  --color-hub-outline-variant: var(--hub-outline-variant);
+  --color-hub-fg: var(--hub-fg);
+  --color-hub-fg-strong: var(--hub-fg-strong);
+  --color-hub-fg-muted: var(--hub-fg-muted);
+  --color-hub-fg-subtle: var(--hub-fg-subtle);
+  --color-hub-fg-inverse: var(--hub-fg-inverse);
+  --color-hub-on-surface: var(--hub-on-surface);
+  --color-hub-on-surface-variant: var(--hub-on-surface-variant);
+  --color-hub-primary: var(--hub-primary);
+  --color-hub-secondary: var(--hub-secondary);
+  --color-hub-danger: var(--hub-danger);
+  --color-hub-success: var(--hub-success);
+  --color-hub-accent: var(--hub-accent);
+}
+
+@layer base {
+  html {
+    @apply antialiased text-hub-fg bg-hub-canvas;
+    font-family: var(--font-sans);
+    overflow-x: clip;
+  }
+
+  body {
+    @apply m-0 min-h-svh;
+    overflow-x: clip;
+  }
+
+  #root {
+    @apply min-h-svh flex flex-col;
+    min-width: 0;
+  }
+}
